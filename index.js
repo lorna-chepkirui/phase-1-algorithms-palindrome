@@ -1,6 +1,22 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  let reverseWord = "";
+
+  // no need to reverse the string if length >=0 or <=1... it returns true immediately
+  if (word.length === 0 || word.length === 1) return true;
+  // otherwise reverse the string and check if it is a palindrome
+  // return word.split("").reverse().join("") === word ? true : false;
+
+  // ALTERNATIVELY
+
+  for (let i = word.length - 1; i >= 0; i--) {
+    reverseWord += word[i];
+  }
+
+  return reverseWord === word;
+
 }
+
 
 /* 
   Add your pseudocode here
